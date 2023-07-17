@@ -1,5 +1,5 @@
 extends CharacterBody2D
-# aidpiadaoudod
+
 const AUDIO_TEMPLATE: PackedScene = preload("res://management/audio_template.tscn")
 
 @onready var textura_do_cavaleiro: Sprite2D = get_node("Textura")
