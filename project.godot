@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 transicao="*res://management/transição.tscn"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [editor]
 
 movie_writer/movie_file="C:/Users/BarroSeco/Videos/Godot Movies.avi"

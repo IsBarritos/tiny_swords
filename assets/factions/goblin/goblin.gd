@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const AREA_DE_ATAQUE: PackedScene = preload("res://assets/factions/goblin/area_de_ataque_do_inimigo.tscn")
 const OFFSET: Vector2 = Vector2(0, 31)
+const AUDIO_TEMPLATE: PackedScene = preload("res://management/audio_template.tscn")
 
 @export var velocidade: float = 200
 @export var limite_da_distancia: float = 60
@@ -82,3 +83,8 @@ func area_de_detecção_corpo_entrou(body) -> void:
 
 func area_de_detecção_corpo_saiu(_body) -> void:
 	ref_cavaleiro = null
+	
+func chamar_sfx(sfx_patio: String) -> void:
+	var sfx = AUDIO_TEMPLATE.instantiate()
+	sfx.sfx_para_tocar = sfx_patio
+	add_child(sfx)
