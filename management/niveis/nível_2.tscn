@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbhwxwhb3pkv7"]
+
+[ext_resource type="PackedScene" uid="uid://b8ip124tyxay6" path="res://management/niveis/nível.tscn" id="1_fqo53"]
+
+[node name="Nível2" instance=ExtResource("1_fqo53")]
+pontos_alvo = 2
+proximo_nivel_patio_da_cena = ""
+nivel_atual_patio_da_cena = "res://management/niveis/nível_2.tscn"

@@ -1,0 +1,78 @@
+[gd_scene load_steps=4 format=3 uid="uid://83cisgdmici"]
+
+[ext_resource type="FontFile" uid="uid://b5b3uxi0dqgu6" path="res://assets/env/kurland.ttf" id="1_15xqr"]
+[ext_resource type="Script" path="res://management/creditos.gd" id="1_njpll"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_s2h1n"]
+font = ExtResource("1_15xqr")
+font_size = 64
+
+[node name="Creditos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_njpll")
+
+[node name="Fundo" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Agradecimento" type="Label" parent="Fundo"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -268.0
+offset_top = -95.0
+offset_right = 269.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Obrigado por jogar!"
+label_settings = SubResource("LabelSettings_s2h1n")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VoltarMenu" type="Button" parent="Fundo" groups=["botao"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.5
+offset_top = 19.5
+offset_right = 155.5
+offset_bottom = 61.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_15xqr")
+theme_override_font_sizes/font_size = 32
+text = "Voltar para o menu"
+
+[node name="Fechar" type="Button" parent="Fundo" groups=["botao"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = 86.5
+offset_right = 53.5
+offset_bottom = 128.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_15xqr")
+theme_override_font_sizes/font_size = 32
+text = "Fechar"

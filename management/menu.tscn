@@ -1,0 +1,201 @@
+[gd_scene load_steps=11 format=3 uid="uid://bkp6yoacfx8ej"]
+
+[ext_resource type="Script" path="res://management/menu.gd" id="1_nmn8n"]
+[ext_resource type="FontFile" uid="uid://b5b3uxi0dqgu6" path="res://assets/env/kurland.ttf" id="2_j2d3d"]
+[ext_resource type="Script" path="res://management/terreno.gd" id="3_o0en7"]
+[ext_resource type="Texture2D" uid="uid://cqgox6r567gg4" path="res://assets/terrain/water/water.png" id="4_cay28"]
+[ext_resource type="Texture2D" uid="uid://du5ge04xwl5nu" path="res://assets/terrain/ground/grass.png" id="5_mkvk2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xm83d"]
+font = ExtResource("2_j2d3d")
+font_size = 64
+outline_size = 8
+outline_color = Color(0, 0, 0, 0.588235)
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cwn52"]
+texture = ExtResource("4_cay28")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_ftkt5"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 3
+sources/0 = SubResource("TileSetAtlasSource_cwn52")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4j0hp"]
+texture = ExtResource("5_mkvk2")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/terrains_peering_bit/right_side = 0
+1:0/0/terrains_peering_bit/bottom_right_corner = 0
+1:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0/terrains_peering_bit/bottom_left_corner = 0
+1:0/0/terrains_peering_bit/left_side = 0
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0/terrains_peering_bit/bottom_left_corner = 0
+2:0/0/terrains_peering_bit/left_side = 0
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 0
+3:0/0/terrains_peering_bit/bottom_side = 0
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/terrains_peering_bit/right_side = 0
+0:1/0/terrains_peering_bit/bottom_right_corner = 0
+0:1/0/terrains_peering_bit/bottom_side = 0
+0:1/0/terrains_peering_bit/top_side = 0
+0:1/0/terrains_peering_bit/top_right_corner = 0
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/terrains_peering_bit/right_side = 0
+1:1/0/terrains_peering_bit/bottom_right_corner = 0
+1:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0/terrains_peering_bit/bottom_left_corner = 0
+1:1/0/terrains_peering_bit/left_side = 0
+1:1/0/terrains_peering_bit/top_left_corner = 0
+1:1/0/terrains_peering_bit/top_side = 0
+1:1/0/terrains_peering_bit/top_right_corner = 0
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/terrains_peering_bit/bottom_side = 0
+2:1/0/terrains_peering_bit/bottom_left_corner = 0
+2:1/0/terrains_peering_bit/left_side = 0
+2:1/0/terrains_peering_bit/top_left_corner = 0
+2:1/0/terrains_peering_bit/top_side = 0
+3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 0
+3:1/0/terrains_peering_bit/bottom_side = 0
+3:1/0/terrains_peering_bit/top_side = 0
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrain = 0
+0:2/0/terrains_peering_bit/right_side = 0
+0:2/0/terrains_peering_bit/top_side = 0
+0:2/0/terrains_peering_bit/top_right_corner = 0
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrain = 0
+1:2/0/terrains_peering_bit/right_side = 0
+1:2/0/terrains_peering_bit/left_side = 0
+1:2/0/terrains_peering_bit/top_left_corner = 0
+1:2/0/terrains_peering_bit/top_side = 0
+1:2/0/terrains_peering_bit/top_right_corner = 0
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrain = 0
+2:2/0/terrains_peering_bit/left_side = 0
+2:2/0/terrains_peering_bit/top_left_corner = 0
+2:2/0/terrains_peering_bit/top_side = 0
+3:2/0 = 0
+3:2/0/terrain_set = 0
+3:2/0/terrain = 0
+3:2/0/terrains_peering_bit/top_side = 0
+0:3/0 = 0
+0:3/0/terrain_set = 0
+0:3/0/terrain = 0
+0:3/0/terrains_peering_bit/right_side = 0
+1:3/0 = 0
+1:3/0/terrain_set = 0
+1:3/0/terrain = 0
+1:3/0/terrains_peering_bit/right_side = 0
+1:3/0/terrains_peering_bit/left_side = 0
+2:3/0 = 0
+2:3/0/terrain_set = 0
+2:3/0/terrain = 0
+2:3/0/terrains_peering_bit/left_side = 0
+3:3/0 = 0
+3:3/0/terrain_set = 0
+3:3/0/terrain = 0
+
+[sub_resource type="TileSet" id="TileSet_68xi4"]
+tile_size = Vector2i(64, 64)
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Terreno"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+sources/0 = SubResource("TileSetAtlasSource_4j0hp")
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nmn8n")
+
+[node name="NomeJogo" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 60.0
+offset_right = 392.0
+offset_bottom = 131.0
+text = "Tiny Swords"
+label_settings = SubResource("LabelSettings_xm83d")
+vertical_alignment = 1
+
+[node name="ContainerBotoes" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -360.0
+offset_right = -60.0
+offset_bottom = -60.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="NovoJogo" type="Button" parent="ContainerBotoes" groups=["botao"]]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j2d3d")
+theme_override_font_sizes/font_size = 32
+text = "Novo Jogo"
+alignment = 2
+
+[node name="Fechar" type="Button" parent="ContainerBotoes" groups=["botao"]]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j2d3d")
+theme_override_font_sizes/font_size = 32
+text = "Sair"
+alignment = 2
+
+[node name="Terreno" type="Node2D" parent="."]
+z_index = -5
+script = ExtResource("3_o0en7")
+
+[node name="Agua" type="TileMap" parent="Terreno"]
+z_index = -2
+tile_set = SubResource("TileSet_ftkt5")
+cell_quadrant_size = 64
+format = 2
+
+[node name="Grama" type="TileMap" parent="Terreno"]
+tile_set = SubResource("TileSet_68xi4")
+cell_quadrant_size = 64
+format = 2
+layer_0/tile_data = PackedInt32Array(327684, 65536, 1, 327683, 0, 0, 393219, 0, 1, 458755, 0, 2, 458756, 65536, 2, 458757, 65536, 2, 393222, 65536, 1, 327686, 65536, 1, 262149, 65536, 0, 262148, 0, 0, 393220, 65536, 1, 393221, 65536, 1, 262150, 131072, 0, 327685, 65536, 1, 327687, 65536, 0, 458758, 65536, 2, 393223, 65536, 1, 393224, 65536, 1, 327688, 65536, 1, 458759, 65536, 2, 458760, 65536, 1, 458761, 65536, 1, 458762, 65536, 1, 393226, 131072, 1, 327690, 65536, 1, 393225, 65536, 1, 327689, 65536, 1, 262152, 0, 0, 262153, 65536, 1, 196617, 0, 0, 196618, 131072, 1, 131082, 196608, 0, 262154, 65536, 1, 524297, 65536, 2, 524296, 0, 2, 524298, 65536, 2, 458763, 131072, 0, 524299, 131072, 2, 327691, 131072, 2, 262155, 131072, 0)

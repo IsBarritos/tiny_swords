@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://bgi33ntr7in35"]
+
+[ext_resource type="Texture2D" uid="uid://bu8qa6k44xcci" path="res://assets/terrain/decoration/tree.png" id="1_tw3ls"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghqki"]
+atlas = ExtResource("1_tw3ls")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ax1dh"]
+atlas = ExtResource("1_tw3ls")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3em5"]
+atlas = ExtResource("1_tw3ls")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oe8ff"]
+atlas = ExtResource("1_tw3ls")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_emdhj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghqki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ax1dh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3em5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oe8ff")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s8cke"]
+size = Vector2(32, 12)
+
+[node name="Arvore" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_emdhj")
+autoplay = "default"
+frame_progress = 0.159435
+
+[node name="AreaDeColisão" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="Colisão" type="CollisionShape2D" parent="AreaDeColisão"]
+position = Vector2(1, 71)
+shape = SubResource("RectangleShape2D_s8cke")

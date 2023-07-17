@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://nlbro584ey1r"]
+
+[ext_resource type="FontFile" uid="uid://b5b3uxi0dqgu6" path="res://assets/env/kurland.ttf" id="1_54max"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sum4p"]
+font = ExtResource("1_54max")
+font_size = 32
+outline_size = 4
+outline_color = Color(0, 0, 0.00392157, 0.588235)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
+
+[node name="Interface" type="CanvasLayer"]
+
+[node name="Vida" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 130.0
+offset_bottom = 57.0
+text = "Vida: 10"
+label_settings = SubResource("LabelSettings_sum4p")
+vertical_alignment = 1
+
+[node name="Pontuação" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 70.0
+offset_right = 178.0
+offset_bottom = 107.0
+text = "Pontuação: 0000"
+label_settings = SubResource("LabelSettings_sum4p")
+vertical_alignment = 1
